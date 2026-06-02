@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Invitación</title>
+    <!-- Tipografías elegantes desde Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <style>
+        /* Estilos Generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf8f8;
+            color: #4a4a4a;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-left: 1px solid #ebd3d8;
+            border-right: 1px solid #ebd3d8;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Encabezado Principal */
+        header {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+                url('https://unsplash.com') no-repeat center/cover;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        h1 {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.8rem;
+            color: #c98293;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        /* Secciones de Información */
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #f2e6e8;
+        }
+
+        .frase {
+            font-style: italic;
+            color: #7d7d7d;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Cuenta Regresiva */
+        .countdown-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #c98293;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .time-box {
+            background: #fff5f6;
+            border: 1px solid #ebd3d8;
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 70px;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #4a4a4a;
+        }
+
+        .time-box label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a3a3a3;
+        }
+
+        /* Detalles del Evento */
+        .card {
+            background: #fffcfc;
+            border: 1px dashed #d4af37;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        h3 {
+            color: #c98293;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Botones Activos */
+        .btn {
+            display: inline-block;
+            background-color: #c98293;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(199, 130, 147, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #b56f80;
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background-color: #d4af37;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-gold:hover {
+            background-color: #bc9a2e;
+        }
+
+        /* Pie de página */
+        footer {
+            padding: 30px 20px;
+            background-color: #fff5f6;
+            font-size: 0.8rem;
+            color: #a3a3a3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Encabezado con el nombre de la quinceañera -->
+        <header>
+            <p style="letter-spacing: 3px; font-size: 0.9rem; text-transform: uppercase; color: #7d7d7d;">Mis XV Años
+            </p>
+            <h1>Abril Jimena</h1>
+            <p class="subtitle">¡Te invito a mi fiesta!</p>
+        </header>
+
+        <!-- Frase emotiva -->
+
+        <section>
+            <p class="frase">"Con mucha emoción y alegría en el corazón, queremos invitar a personas tan especiales como
+                tú a ser parte de un momento único einolvidable en mi vida.
+                Celebramos un sueño que se convierte en realidad.
+                Mis quince años..."</p>
+        </section>
+
+        <!-- Padres y padrinos -->
+        <section>
+            <h3>Padres y Padrinos</h3>
+            <p>Nayeli García y Benjamín Camacho</p>
+            <p>Diana García y Jesús Hernández</p>
+        </section>
+
+        <!-- Contador de Tiempo -->
+        <section>
+            <p class="countdown-title">Solo falta...</p>
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <label>Días</label>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <label>Hrs</label>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <label>Min</label>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <label>Seg</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicaciones e Itinerario -->
+        <section>
+            <!-- Misa -->
+            <div class="card">
+                <h3>Ceremonia Religiosa</h3>
+                <p><strong>Hora:</strong> 14:00 hrs</p>
+                <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
+                <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
+                <!-- Reemplaza el enlace de Google Maps aquí abajo -->
+                <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">Ver mapa</a>
+            </div>
+
+            <!-- Recepción -->
+            <div class="card">
+                <h3>Recepción y Banquete</h3>
+                <p><strong>Hora:</strong> 19:30 hrs</p>
+                <p><strong>Lugar:</strong> Salón de Eventos "La Toscana SJV"</p>
+                <p>Prol. Morelos 100, 54449 San José el Vidrio, Méx.</p>
+                <!-- Reemplaza el enlace de Google Maps aquí abajo -->
+                <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">Ver mapa</a>
+            </div>
+        </section>
+
+        <!-- Confirmación de Asistencia -->
+        <section style="background-color: #fffcfc;">
+            <h3 style="margin-bottom: 10px;">Confirmación de Asistencia</h3>
+            <p>Tu presencia es lo más importante para mí. Por favor, confírmame tu asistencia antes del 15 de Julio
+                2026.
+            </p>
+
+            <!-- Reemplaza el número de teléfono en el enlace (usa formato internacional, ej. 521234567890) -->
+            <a href="https://wa.me/5215551594567" target="_blank" class="btn">
+                Confirmar por WhatsApp
+            </a>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>Código de vestimenta: Formal / Gala</p>
+            <p style="margin-top: 10px;">¡Te espero con mucha ilusión!</p>
+        </footer>
+    </div>
+
+    <!-- Script Lógico para el Reloj de Cuenta Regresiva -->
+    <script>
+        // CONFIGURA AQUÍ TU FECHA DE XV AÑOS (Año, Mes [0-11], Día, Hora, Minutos)
+        // Nota: Enero es 0, Febrero es 1, ..., Diciembre es 11
+        const fechaEvento = new Date(2026, 8, 8, 14, 0, 0).getTime();
+
+        const x = setInterval(function () {
+            const ahora = new Date().getTime();
+            const distancia = fechaEvento - ahora;
+
+            // Cálculos de tiempo para días, horas, minutos y segundos
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Formato de dos dígitos
+            document.getElementById("days").innerHTML = dias < 10 ? "0" + dias : dias;
+            document.getElementById("hours").innerHTML = horas < 10 ? "0" + horas : horas;
+            document.getElementById("minutes").innerHTML = minutos < 10 ? "0" + minutos : minutos;
+            document.getElementById("seconds").innerHTML = segundos < 10 ? "0" + segundos : segundos;
+
+            // Si la cuenta regresiva termina
+            if (distancia < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "<p style='color:#c98293; font-weight:600;'>¡Llegó el gran día!</p>";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

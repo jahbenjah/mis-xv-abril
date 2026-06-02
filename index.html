@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Invitación</title>
+    <!-- Fuentes Elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <!-- Iconos Visuales -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE BIENVENIDA (INTRO) -->
+    <div id="intro-overlay">
+        <p class="intro-welcome">Bienvenidos a la invitación de</p>
+        <h1 class="intro-name">Abril Jimena</h1>
+        <p class="subtitle intro-subtitle">Mis XV Años</p>
+        <button class="btn btn-gold btn-open" onclick="ingresarInvitacion()">
+            <i class="fa-solid fa-envelope-open"></i> Abrir Invitación
+        </button>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <header>
+            <p class="header-tag">Mis XV Años</p>
+            <h1>Abril Jimena</h1>
+            <p class="subtitle">¡Te espero en mi fiesta!</p>
+        </header>
+
+        <!-- Frase emotiva -->
+
+        <section>
+            <p class="frase">"Con mucha emoción y alegría en el corazón, queremos invitar a personas tan especiales como
+                tú a ser parte de un momento único einolvidable en mi vida.
+                Celebramos un sueño que se convierte en realidad.
+                Mis quince años..."</p>
+        </section>
+
+        <!-- Padres y padrinos -->
+        <section>
+            <h3>Padres y Padrinos</h3>
+            <p>Nayeli García y Benjamín Camacho</p>
+            <p>Diana García y Jesús Hernández</p>
+        </section>
+
+        <!-- CONTROL DE PASES ASIGNADOS -->
+        <section class="section-light">
+            <h3>Pase Exclusivo</h3>
+            <div class="ticket-box">
+                <div class="family-name" id="guest-family">Familia Invitada</div>
+                <div class="badge"><i class="fa-solid fa-circle-check"></i> Pase Habilitado</div>
+                <div class="ticket-info">
+                    <div class="ticket-stat">
+                        <span id="guest-tickets">2</span>
+                        <label>Asientos</label>
+                    </div>
+                    <div class="ticket-stat">
+                        <span id="guest-table">4</span>
+                        <label>Mesa</label>
+                    </div>
+                </div>
+            </div>
+            <p class="ticket-note">* Los pases son personales e intransferibles.</p>
+        </section>
+
+        <!-- CUENTA REGRESIVA -->
+        <section>
+            <h3>Solo Falta...</h3>
+            <div class="countdown">
+                <div class="time-box"><span id="days">00</span><label>Días</label></div>
+                <div class="time-box"><span id="hours">00</span><label>Hrs</label></div>
+                <div class="time-box"><span id="minutes">00</span><label>Min</label></div>
+                <div class="time-box"><span id="seconds">00</span><label>Seg</label></div>
+            </div>
+            <div class="calendar-links">
+                <a href="https://google.com¡Acompáñame+a+celebrar+mis+XV+años!&location=Salón+de+Eventos+El+Campanario"
+                    target="_blank" class="btn btn-outline">
+                    <i class="fa-brands fa-google"></i> Google Calendar
+                </a>
+            </div>
+        </section>
+
+        <!-- LÍNEA DE TIEMPO (ITINERARIO) -->
+        <section>
+            <h2>Itinerario</h2>
+            <h3>Detalles del gran día</h3>
+            <div class="timeline">
+                <div class="tl-container tl-left">
+                    <div class="tl-icon"><i class="fa-solid fa-church"></i></div>
+                    <div class="tl-time">14:00 HRS</div>
+                    <div class="tl-title">Misa de Acción de Gracias</div>
+                    <div class="tl-desc">Parroquia de San José El Vidrio</div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-icon"><i class="fa-solid fa-camera"></i></div>
+                    <div class="tl-time">15:00 HRS</div>
+                    <div class="tl-title">Sesión Fotográfica / Cocktelería</div>
+                    <div class="tl-desc">Jardín de bienvenida para invitados</div>
+                </div>
+                <div class="tl-container tl-left">
+                    <div class="tl-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <div class="tl-time">19:30 HRS</div>
+                    <div class="tl-title">Entrada del Protocolo y Vals</div>
+                    <div class="tl-desc">Inicio formal de la recepción</div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="tl-time">20:30 HRS</div>
+                    <div class="tl-title">Cena y Banquete</div>
+                    <div class="tl-desc">Cena formal de tres tiempos</div>
+                </div>
+                <div class="tl-container tl-left">
+                    <div class="tl-icon"><i class="fa-solid fa-icons"></i></div>
+                    <div class="tl-time">22:00 HRS</div>
+                    <div class="tl-title">¡A Bailar!</div>
+                    <div class="tl-desc">Apertura de pista y grupo en vivo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UBICACIONES -->
+        <section>
+            <h2>Ubicaciones</h2>
+
+          
+
+          
+        </section>
+
+        <!-- Confirmación de Asistencia -->
+        <section style="background-color: #fffcfc;">
+            <h3 style="margin-bottom: 10px;">Confirmación de Asistencia</h3>
+            <p>Tu presencia es lo más importante para mí. Por favor, confírmame tu asistencia antes del 15 de Julio
+                2026.
+            </p>
+
+            <!-- Reemplaza el número de teléfono en el enlace (usa formato internacional, ej. 521234567890) -->
+            <a href="https://wa.me/5215551594567" target="_blank" class="btn">
+                Confirmar por WhatsApp
+            </a>
+        </section>
+
+        <div class="card">
+            <i class="fa-solid fa-church card-icon"></i>
+            <h3>Ceremonia Religiosa</h3>
+            <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
+            <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
+            <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">
+                <i class="fa-solid fa-location-dot"></i>
+                Ver ubicación
+            </a>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-cake-candles card-icon"></i>
+            <h3>Recepción y Banquete</h3>
+            <p><strong>Lugar:</strong> Salón de Eventos "La Toscana SJV"</p>
+            <p>Prol. Morelos 100, 54449 San José el Vidrio, Méx.</p>
+            <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold"><i class="fa-solid fa-location-dot"></i>
+                Ver ubicación</a>
+        </div>
+        </section>
+
+        <!-- HOSPEDAJE RECOMENDADO -->
+        <section class="section-light">
+            <h2>Hospedaje Recomendado</h2>
+            <h3>Para invitados foráneos</h3>
+            <div class="card card-solid">
+                <i class="fa-solid fa-hotel card-icon-gold"></i>
+                <p><strong>Hotel La Toscana SJV</strong></p>
+                <!-- <p class="hotel-meta">Tarifa preferencial mencionando el evento</p> -->
+                <div class="code-box">Dirección: Prolongación Morelos #100, San José el vidrio, Nicolás Romero, estado de México.</div>
+                <p class="hotel-phone"><i class="fa-solid fa-phone"></i> Tel: +52 123 456 7890</p>
+            </div>
+        </section>
+
+        <!-- MESA DE REGALOS -->
+        <section>
+            <h2>Mesa de Regalos</h2>
+            <p>Tu presencia es mi mejor regalo, pero si deseas hacerme un detalle, te dejo mis opciones:</p>
+
+            <div class="gift-logos">
+                <a href="https://liverpool.com.mx" target="_blank">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Liverpool<br><strong>ID: 5049382</strong></span>
+                </a>
+                <a href="https://amazon.com" target="_blank">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Amazon<br>Wishlist</span>
+                </a>
+            </div>
+
+            <p class="gift-envelope"><i class="fa-solid fa-envelope-open-text"></i> También contaremos con lluvia de
+                sobres en el salón.</p>
+            <button class="btn btn-outline" onclick="toggleDatosBancarios()">Ver Datos Bancarios</button>
+
+            <div class="bank-details" id="bank-box">
+                <p><strong>Banco:</strong> Banco BBVA</p>
+                <p><strong>Titular:</strong>Abril Jimena Camacho García</p>
+                <p><strong>Cuenta:</strong> 156 341 4034</p>
+                <p><strong>CLABE Interbancaria:</strong> 012 180 01563414034 9</p>
+            </div>
+        </section>
+
+        <!-- RSVP INTERACTIVO -->
+        <section class="section-rsvp">
+            <h2>Confirmar Asistencia</h2>
+            <p class="rsvp-intro">Por favor, indícanos si podrás acompañarnos antes del 15 de Noviembre.</p>
+
+            <form class="rsvp-form" onsubmit="enviarRSVP(event)">
+                <div class="form-group">
+                    <label for="rsvp-status">¿Asistirás?</label>
+                    <select id="rsvp-status" onchange="actualizarCamposAsistencia()" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="si">Sí, asistiré con gusto</option>
+                        <option value="no">No podré asistir</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="group-guests-count">
+                    <label for="rsvp-count">¿Cuántos de tu pase asistirán?</label>
+                    <select id="rsvp-count"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rsvp-message">Mensaje para la Quinceañera</label>
+                    <textarea id="rsvp-message" rows="3" placeholder="Déjale tus buenos deseos a Abril Jimena..."></textarea>
+                </div>
+
+                <button type="submit" class="btn"><i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>Código de vestimenta: Casual / Formal</p>
+            <p class="footer-love">¡Gracias por ser parte de mi vida!</p>
+        </footer>
+    </div>
+
+    <!-- Vinculación del archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>
