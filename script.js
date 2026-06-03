@@ -53,8 +53,8 @@ function actualizarCamposAsistencia() {
 // Captura variables de la barra del navegador (URL Params)
 // Ejemplo para pruebas: index.html?f=Familia+Morales+Gomez&p=5&m=12
 const urlParams = new URLSearchParams(window.location.search);
-const familia = urlParams.get('f') || "Familia Morales"; 
-const pasesMaximos = parseInt(urlParams.get('p')) || 4;  
+const familia = urlParams.get('f') || "Familia Invitada"; 
+const pasesMaximos = parseInt(urlParams.get('p')) || 2;  
 const numeroMesa = urlParams.get('m') || "Asignada en la entrada";
 
 // Asigna la información a las tarjetas visuales
@@ -81,14 +81,14 @@ function enviarRSVP(event) {
     const mensajeOriginal = document.getElementById('rsvp-message').value;
     
     // CONFIGURACIÓN OBLIGATORIA: Escribe tu número real aquí con código de país (ej. 52 para México)
-    const numeroCelularDestino = "521234567890"; 
+    const numeroCelularDestino = "5215551594567"; 
     let textoWhatsApp = "";
 
     if (status === 'si') {
         const cantidadAsistentes = rsvpCountSelect.value;
-        textoWhatsApp = `¡Hola Sofía! ✨ Confirmo que la *${familia}* asistirá a tu fiesta de XV Años. Confirmamos *${cantidadAsistentes} personas* de los pases asignados.`;
+        textoWhatsApp = `¡Hola Abril! ✨ Confirmo que la *${familia}* asistirá a tu fiesta de XV Años. Confirmamos *${cantidadAsistentes} personas* de los pases asignados.`;
     } else {
-        textoWhatsApp = `¡Hola Sofía! Te agradecemos de corazón la invitación a tus XV Años. Lamentablemente la *${familia}* no podrá asistir en esta ocasión. Te deseamos lo mejor en tu día.`;
+        textoWhatsApp = `¡Hola Abril! Te agradecemos de corazón la invitación a tus XV Años. Lamentablemente la *${familia}* no podrá asistir en esta ocasión. Te deseamos lo mejor en tu día.`;
     }
 
     // Si el invitado escribió un mensaje opcional, lo concatena con formato de bloque de cita

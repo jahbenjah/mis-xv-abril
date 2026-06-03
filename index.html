@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis XV Años - Abril Jimena</title>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mis XV Años | Abril Jimena">
+    <meta property="og:description" content="Acompáñanos a celebrar este momento tan especial.">
+    <meta property="og:image" content="https://aspnetcoremaster.com/mis-xv-abril/favicon-96x96.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aspnetcoremaster.com/mis-xv-abril/index.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="site.webmanifest" />
     <!-- Fuentes Elegantes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +25,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Vinculación del archivo CSS externo -->
     <link rel="stylesheet" href="styles.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "XV Años Abril Jimena",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "startDate": "2026-08-08T16:00",
+  "endDate": "2026-08-09T01:00",
+  "location": {
+    "@type": "Place",
+    "name": "Salón de Eventos La Toscana SJV",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Prol. Morelos 100",
+      "addressLocality": "San José el Vidrio",
+      "postalCode": "54449",
+      "addressRegion": "Méx.",
+      "addressCountry": "MX"
+    }
+  },
+  "subEvent": {
+    "@type": "Event",
+    "name": "Ceremonia Religiosa XV Años Abril Jimena",
+    "startDate": "2026-08-08T15:00",
+    "endDate":   "2026-08-08T16:00",
+    "location": {
+      "@type": "Place",
+      "name": "Parroquia de San José El Vidrio",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Morelos 83, Centro San José El Vidrio",
+        "addressLocality": "Nicolás Romero",
+        "postalCode": "54449",
+        "addressRegion": "Méx.",
+        "addressCountry": "MX"
+      }
+    }
+  },
+  "organizer": {    
+    "@type": "Person",
+    "name": "Familia de la Camacho García",
+  }
+}
+</script>
+
 
 </head>
 
@@ -75,6 +128,112 @@
                 </div>
             </div>
             <p class="ticket-note">* Los pases son personales e intransferibles.</p>
+        </section>
+
+        <section>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/A41To7E3KSc?si=vGmKGR2wI8IpJ-si" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+                <div class="music-player">
+                    <button id="playBtn">🎵</button>
+                    <span>Mi Canción Especial</span>
+                </div>
+
+                <audio id="bgMusic" loop>
+                    <source src="margareth.mp3" type="audio/mpeg" autoplay>
+                </audio>
+
+                <style>
+                    .music-player {
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        background: linear-gradient(135deg, #ff9ac8, #ffc7df);
+                        color: white;
+                        padding: 12px 18px;
+                        border-radius: 50px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        box-shadow: 0 10px 30px rgba(255, 105, 180, .4);
+                        z-index: 9999;
+                        font-family: serif;
+                    }
+
+                    #playBtn {
+                        width: 50px;
+                        height: 50px;
+                        border: none;
+                        border-radius: 50%;
+                        background: #ff69b4;
+                        color: white;
+                        font-size: 22px;
+                        cursor: pointer;
+                        animation: pulse 2s infinite;
+                    }
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                        }
+
+                        50% {
+                            transform: scale(1.1);
+                        }
+
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                </style>
+
+                <script>
+                    const audio = document.getElementById('bgMusic');
+                    const btn = document.getElementById('playBtn');
+
+                    btn.addEventListener('click', () => {
+                        if (audio.paused) {
+                            audio.play();
+                            btn.innerHTML = '⏸';
+                        } else {
+                            audio.pause();
+                            btn.innerHTML = '🎵';
+                        }
+                    });
+
+                    // Intento de autoplay
+                    window.addEventListener('load', () => {
+                        audio.play().catch(() => {
+                            console.log('Autoplay bloqueado por el navegador');
+                        });
+                    });
+                </script>
+            </div>
+
+            <style>
+                .video-container {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    /* Relación de aspecto 16:9 */
+                    height: 0;
+                    overflow: hidden;
+                    max-width: 100%;
+                }
+
+                .video-container iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+
+
         </section>
 
         <!-- CUENTA REGRESIVA -->
@@ -141,7 +300,7 @@
             </p>
 
             <!-- Reemplaza el número de teléfono en el enlace (usa formato internacional, ej. 521234567890) -->
-            <a href="https://wa.me/5215551594567" target="_blank" class="btn">
+            <a href="https://wa.me/5215559971021" target="_blank" class="btn">
                 Confirmar por WhatsApp
             </a>
         </section>
@@ -204,7 +363,7 @@
         <!-- RSVP INTERACTIVO -->
         <section class="section-rsvp">
             <h2>Confirmar Asistencia</h2>
-            <p class="rsvp-intro">Por favor, indícanos si podrás acompañarnos antes del 15 de Noviembre.</p>
+            <p class="rsvp-intro">Por favor, indícanos si podrás acompañarnos antes del 15 de Julio 2026.</p>
 
             <form class="rsvp-form" onsubmit="enviarRSVP(event)">
                 <div class="form-group">
