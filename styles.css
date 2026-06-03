@@ -18,7 +18,7 @@ body {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                url('https://unsplash.com') no-repeat center/cover;
+                url('img/sobre.webp') no-repeat center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +65,7 @@ body {
 header {
     padding: 80px 20px;
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                url('https://unsplash.com') no-repeat center/cover;
+                url('img/fondo.png') no-repeat center/cover;
     border-bottom: 2px solid #d4af37;
 }
 .header-tag {
