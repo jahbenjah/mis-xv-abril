@@ -1,3 +1,49 @@
+/* Paleta de Colores:
+
+ECE0DA - Fondo Principal
+FAC8CB - Rosa Claro (Detalles y Botones)
+F6B0BB - Rosa Medio (Encabezados y Destacados)
+9CAD8C - Verde Suave (Íconos y Elementos Secundarios)
+7E8C69 - Verde Oscuro (Texto Secundario)
+D4AF37 - Dorado (Detalles Especiales) */
+
+/* #FF5EAA ROSA BOMBÓN (Color Principal / Vibrante) 
+#D4AF37 ORO BRILLANTE (Acento Metálico / Elegante)
+#FFFFFF BLANCO PURO (Fondo / Equilibrio)
+#FFF0F5 ROSA PASTEL SUAVE (Opcional para matizar textos o fondos blandos) */
+:root{
+    --bg: #f6f0f1;
+    --text: #4a4a4a;
+    --muted: #7d7d7d;
+    --muted-2: #5a5a5a;
+    --border: #ebd3d8;
+    --light-border: #f2e6e8;
+    --surface: #ffffff;
+    --surface-2: #fffcfc;
+    --panel: #fff5f6;
+    --accent: #c98293; /* rosa actual */
+    --accent-strong: #ff5eaa; /* rosa bombón */
+    --gold: #d4af37;
+    --success: #4caf50;
+    --highlight: #a3a3a3;
+    --code-border: #c98293;
+    --shadow: rgba(0,0,0,0.08);
+    --input-border-focus: #c98293;
+}
+
+/* Paletas alternativas: aplicar en <html data-theme="bombon"> o <html data-theme="verde"> */
+:root[data-theme="bombon"]{
+    --accent: var(--accent-strong);
+    --panel: #fff0f5;
+    --surface-2: #fff8fb;
+}
+:root[data-theme="verde"]{
+    --accent: #9CAD8C;
+    --muted: #7E8C69;
+    --panel: #f6faf6;
+    --border: #dfe9df;
+    --gold: #7E8C69;
+}
 /* Estilos Globales */
 * {
     box-sizing: border-box;
@@ -6,8 +52,8 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f6f0f1;
-    color: #4a4a4a;
+    background-color: var(--bg);
+    color: var(--text);
     text-align: center;
     line-height: 1.6;
     overflow-x: hidden;
@@ -36,7 +82,7 @@ body {
     letter-spacing: 4px;
     text-transform: uppercase;
     font-size: 0.9rem;
-    color: #7d7d7d;
+    color: var(--muted);
 }
 .intro-name {
     font-size: 4.5rem;
@@ -54,10 +100,10 @@ body {
 .container {
     max-width: 550px;
     margin: 0 auto;
-    background: #ffffff;
-    box-shadow: 0px 0px 30px rgba(0,0,0,0.08);
-    border-left: 1px solid #ebd3d8;
-    border-right: 1px solid #ebd3d8;
+    background: var(--surface);
+    box-shadow: 0px 0px 30px var(--shadow);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     position: relative;
 }
 
@@ -72,51 +118,51 @@ header {
     letter-spacing: 3px;
     font-size: 0.85rem;
     text-transform: uppercase;
-    color: #7d7d7d;
+    color: var(--muted);
 }
 h1 {
     font-family: 'Alex Brush', cursive;
     font-size: 4rem;
-    color: #c98293;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 h2 {
     font-family: 'Alex Brush', cursive;
     font-size: 2.8rem;
-    color: #c98293;
+    color: var(--accent);
     margin-bottom: 20px;
 }
 h3 {
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #d4af37;
+    color: var(--gold);
     margin-bottom: 15px;
 }
 .subtitle {
     font-size: 1rem;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #d4af37;
+    color: var(--gold);
     font-weight: 600;
 }
 
 /* Modificadores de Sección */
 section {
     padding: 50px 25px;
-    border-bottom: 1px solid #f2e6e8;
+    border-bottom: 1px solid var(--light-border);
 }
 .section-light {
-    background-color: #fffcfc;
+    background-color: var(--surface-2);
 }
 .section-rsvp {
-    background-color: #fff5f6;
+    background-color: var(--panel);
 }
 
 /* Pases Dinámicos */
 .ticket-box {
-    background: #fff5f6;
-    border: 2px dashed #ebd3d8;
+    background: var(--panel);
+    border: 2px dashed var(--border);
     border-radius: 15px;
     padding: 30px 20px;
     margin: 20px 0;
@@ -124,12 +170,12 @@ section {
 .family-name {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #c98293;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 .badge {
     display: inline-block;
-    background: #4caf50;
+    background: var(--success);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -151,12 +197,12 @@ section {
 .ticket-stat label {
     display: block;
     font-size: 0.7rem;
-    color: #a3a3a3;
+    color: var(--highlight);
     text-transform: uppercase;
 }
 .ticket-note {
     font-size: 0.85rem;
-    color: #7d7d7d;
+    color: var(--muted);
     font-style: italic;
 }
 
@@ -167,8 +213,8 @@ section {
     gap: 12px;
 }
 .time-box {
-    background: #fffcfc;
-    border: 1px solid #ebd3d8;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 12px;
     min-width: 75px;
@@ -177,12 +223,12 @@ section {
     display: block;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #4a4a4a;
+    color: var(--text);
 }
 .time-box label {
     font-size: 0.65rem;
     text-transform: uppercase;
-    color: #a3a3a3;
+    color: var(--highlight);
 }
 .calendar-links {
     display: flex;
@@ -208,7 +254,7 @@ section {
     content: '';
     position: absolute;
     width: 2px;
-    background: #ebd3d8;
+    background: var(--border);
     top: 0; bottom: 0; left: 50%;
     margin-left: -1px;
 }
@@ -233,38 +279,38 @@ section {
     height: 40px;
     right: -20px;
     top: 15px;
-    background: #fff5f6;
-    border: 2px solid #c98293;
+    background: var(--panel);
+    border: 2px solid var(--accent);
     border-radius: 50%;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #c98293;
+    color: var(--accent);
 }
 .tl-right .tl-icon {
     left: -20px;
 }
 .tl-time {
     font-weight: 600;
-    color: #d4af37;
+    color: var(--gold);
     font-size: 0.9rem;
 }
 .tl-title {
     font-weight: 600;
     font-size: 0.95rem;
     margin: 2px 0;
-    color: #4a4a4a;
+    color: var(--text);
 }
 .tl-desc {
     font-size: 0.8rem;
-    color: #7d7d7d;
+    color: var(--muted);
 }
 
 /* Tarjetas Informativas */
 .card {
-    background: #fffcfc;
-    border: 1px solid #f2e6e8;
+    background: var(--surface-2);
+    border: 1px solid var(--light-border);
     border-radius: 15px;
     padding: 30px 20px;
     margin-bottom: 25px;
@@ -272,7 +318,7 @@ section {
 }
 .card-icon {
     font-size: 1.8rem;
-    color: #c98293;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 .card-solid {
@@ -280,12 +326,12 @@ section {
 }
 .card-icon-gold {
     font-size: 1.5rem;
-    color: #d4af37;
+    color: var(--gold);
     margin-bottom: 10px;
 }
 .hotel-meta {
     font-size: 0.85rem;
-    color: #7d7d7d;
+    color: var(--muted);
     margin: 10px 0;
 }
 .hotel-phone {
@@ -294,13 +340,13 @@ section {
 }
 .code-box {
     display: inline-block;
-    background: #fff5f6;
-    border: 1px dashed #c98293;
+    background: var(--panel);
+    border: 1px dashed var(--accent);
     padding: 5px 12px;
     border-radius: 5px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #c98293;
+    color: var(--accent);
 }
 
 /* Mesa de Regalos */
@@ -316,12 +362,12 @@ section {
     align-items: center;
     text-decoration: none;
     font-size: 0.8rem;
-    color: #4a4a4a;
+    color: var(--text);
     font-weight: 500;
 }
 .gift-logos i {
     font-size: 2rem;
-    color: #c98293;
+    color: var(--accent);
     margin-bottom: 8px;
 }
 .gift-envelope {
@@ -329,12 +375,12 @@ section {
     font-size: 0.9rem;
 }
 .gift-envelope i {
-    color: #c98293;
+    color: var(--accent);
 }
 .bank-details {
     display: none;
-    background: #fdfafb;
-    border: 1px solid #ebd3d8;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 20px;
     margin-top: 15px;
@@ -356,7 +402,7 @@ section {
 }
 .rsvp-form {
     text-align: left;
-    background: #fff5f6;
+    background: var(--panel);
     padding: 25px;
     border-radius: 15px;
 }
@@ -368,19 +414,19 @@ section {
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #5a5a5a;
+    color: var(--muted-2);
 }
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ebd3d8;
+    border: 1px solid var(--border);
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.9rem;
 }
 .form-group select:focus, .form-group input:focus {
     outline: none;
-    border-color: #c98293;
+    border-color: var(--input-border-focus);
 }
 #group-guests-count {
     display: none;
