@@ -1,5 +1,4 @@
-<    <!-- Favicon -->
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -144,101 +143,16 @@
                 </div>
 
                 <audio id="bgMusic" loop>
-                    <source src="margareth.mp3" type="audio/mpeg" autoplay>
+                    <source src="margareth.mp3" type="audio/mpeg">
                 </audio>
 
-                <style>
-                    .music-player {
-                        position: fixed;
-                        bottom: 20px;
-                        right: 20px;
-                        background: linear-gradient(135deg, #ff9ac8, #ffc7df);
-                        color: white;
-                        padding: 12px 18px;
-                        border-radius: 50px;
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-                        box-shadow: 0 10px 30px rgba(255, 105, 180, .4);
-                        z-index: 9999;
-                        font-family: serif;
-                    }
-
-                    #playBtn {
-                        width: 50px;
-                        height: 50px;
-                        border: none;
-                        border-radius: 50%;
-                        background: #ff69b4;
-                        color: white;
-                        font-size: 22px;
-                        cursor: pointer;
-                        animation: pulse 2s infinite;
-                    }
-
-                    @keyframes pulse {
-                        0% {
-                            transform: scale(1);
-                        }
-
-                        50% {
-                            transform: scale(1.1);
-                        }
-
-                        100% {
-                            transform: scale(1);
-                        }
-                    }
-                </style>
-
-                <script>
-                    const audio = document.getElementById('bgMusic');
-                    const btn = document.getElementById('playBtn');
-
-                    btn.addEventListener('click', () => {
-                        if (audio.paused) {
-                            audio.play();
-                            btn.innerHTML = '⏸';
-                        } else {
-                            audio.pause();
-                            btn.innerHTML = '🎵';
-                        }
-                    });
-
-                    // Intento de autoplay
-                    window.addEventListener('load', () => {
-                        audio.play().catch(() => {
-                            console.log('Autoplay bloqueado por el navegador');
-                        });
-                    });
-                </script>
             </div>
-
-            <style>
-                .video-container {
-                    position: relative;
-                    padding-bottom: 56.25%;
-                    /* Relación de aspecto 16:9 */
-                    height: 0;
-                    overflow: hidden;
-                    max-width: 100%;
-                }
-
-                .video-container iframe {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-            </style>
-
 
         </section>
 
         <!-- CUENTA REGRESIVA -->
         <section>
-            <h3>Solo Falta...</h3>
+            <h3>Solo Faltan...</h3>
             <div class="countdown">
                 <div class="time-box"><span id="days">00</span><label>Días</label></div>
                 <div class="time-box"><span id="hours">00</span><label>Hrs</label></div>
@@ -305,26 +219,28 @@
             </a>
         </section>
 
-        <div class="card">
-            <i class="fa-solid fa-church card-icon"></i>
-            <h3>Ceremonia Religiosa</h3>
-            <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
-            <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
-            <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">
-                <i class="fa-solid fa-location-dot"></i>
-                Ver ubicación
-            </a>
-        </div>
+        <section class="section-light">
+            <div class="card">
+                <i class="fa-solid fa-church card-icon"></i>
+                <h3>Ceremonia Religiosa</h3>
+                <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
+                <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
+                <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Ver ubicación
+                </a>
+            </div>
 
-        <div class="card">
-            <i class="fa-solid fa-cake-candles card-icon"></i>
-            <h3>Recepción y Banquete</h3>
-            <p><strong>Lugar:</strong> Salón de Eventos "La Toscana SJV"</p>
-            <p>Prol. Morelos 100, 54449 San José el Vidrio, Méx.</p>
-            <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold"><i
-                    class="fa-solid fa-location-dot"></i>
-                Ver ubicación</a>
-        </div>
+            <div class="card">
+                <i class="fa-solid fa-cake-candles card-icon"></i>
+                <h3>Recepción y Banquete</h3>
+                <p><strong>Lugar:</strong> Salón de Eventos "La Toscana SJV"</p>
+                <p>Prol. Morelos 100, 54449 San José el Vidrio, Méx.</p>
+                <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold"><i
+                        class="fa-solid fa-location-dot"></i>
+                    Ver ubicación</a>
+            </div>
+
         </section>
 
         <!-- HOSPEDAJE RECOMENDADO -->
@@ -345,9 +261,6 @@
         <section>
             <h2>Mesa de Regalos</h2>
             <p>Tu presencia es mi mejor regalo, pero si deseas hacerme un detalle, te dejo mis opciones:</p>
-
-
-
             <p class="gift-envelope"><i class="fa-solid fa-envelope-open-text"></i> También contaremos con lluvia de
                 sobres en el salón.</p>
             <button class="btn btn-outline" onclick="toggleDatosBancarios()">Ver Datos Bancarios</button>
@@ -395,8 +308,93 @@
             <p class="footer-love">¡Gracias por ser parte de mi vida!</p>
         </footer>
     </div>
+    
+    <script>
+        const audio = document.getElementById('bgMusic');
+        const btn = document.getElementById('playBtn');
+
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = '⏸';
+            } else {
+                audio.pause();
+                btn.innerHTML = '🎵';
+            }
+        });
+
+        // Intento de autoplay
+        window.addEventListener('load', () => {
+            audio.play().catch(() => {
+                console.log('Autoplay bloqueado por el navegador');
+            });
+        });
+    </script>
+
+    <style>
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff9ac8, #ffc7df);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, .4);
+            z-index: 9999;
+            font-family: serif;
+        }
+
+        #playBtn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #ff69b4;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 
     <!-- Vinculación del archivo JavaScript externo -->
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Relación de aspecto 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
     <script src="script.min.js"></script>
 </body>
 
