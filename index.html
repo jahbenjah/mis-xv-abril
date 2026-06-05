@@ -11,11 +11,12 @@
     <meta property="og:image" content="https://aspnetcoremaster.com/mis-xv-abril/og-imagen.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aspnetcoremaster.com/mis-xv-abril/index.html">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Fuentes Elegantes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +40,7 @@
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Prol. Morelos 100",
-      "addressLocality": "San José el Vidrio",
+      "addressLocality": "San José el Vidrio,Nicolás Romero",
       "postalCode": "54449",
       "addressRegion": "Méx.",
       "addressCountry": "MX"
@@ -94,24 +95,24 @@
         </header>
 
         <!-- Frase emotiva -->
-
-        <section>
+        <section class="section-light">
+            <h2>Queridos amigos y familiares,</h2>
             <p class="frase">"Con mucha emoción y alegría en el corazón, queremos invitar a personas tan especiales como
-                tú a ser parte de un momento único einolvidable en mi vida.
+                tú a ser parte de un momento único e inolvidable en mi vida.
                 Celebramos un sueño que se convierte en realidad.
                 Mis quince años..."</p>
         </section>
 
         <!-- Padres y padrinos -->
-        <section>
-            <h3>Padres y Padrinos</h3>
+        <section class="section-rsvp">
+            <h2>Padres y Padrinos</h2>
             <p>Nayeli García y Benjamín Camacho</p>
             <p>Diana García y Jesús Hernández</p>
         </section>
 
         <!-- CUENTA REGRESIVA -->
-        <section>
-            <h3>Solo Faltan...</h3>
+        <section class="section-light">
+            <h2>Solo Faltan...</h2>
             <div class="countdown">
                 <div class="time-box"><span id="days">00</span><label>Días</label></div>
                 <div class="time-box"><span id="hours">00</span><label>Hrs</label></div>
@@ -127,7 +128,7 @@
         </section>
 
         <!-- LÍNEA DE TIEMPO (ITINERARIO) -->
-        <section>
+        <section class="section-rsvp">
             <h2>Itinerario</h2>
             <h3>Detalles del gran día</h3>
             <div class="timeline">
@@ -140,7 +141,7 @@
                 <div class="tl-container tl-right">
                     <div class="tl-icon"><i class="fa-solid fa-camera"></i></div>
                     <div class="tl-time">16:00 HRS</div>
-                    <div class="tl-title">Sesión Fotográfica / Cocktelería</div>
+                    <div class="tl-title">Cocteld de Bienvenida /Cabina Fotográfica</div>
                     <div class="tl-desc">Jardín de bienvenida para invitados</div>
                 </div>
                 <div class="tl-container tl-right">
@@ -165,44 +166,45 @@
         </section>
 
         <!-- Confirmación de Asistencia -->
-        <section style="background-color: #fffcfc;">
-            <h3 style="margin-bottom: 10px;">Tienes alguna duda</h3>
-            <p>Puedes confirmar tu asistencia o resolver cualquier duda que tengas contactándome directamente por WhatsApp.
+        <section class="section-light">
+            <h2 style="margin-bottom: 10px;">Tienes alguna duda</h2>
+            <p>Puedes resolver cualquier duda que tengas contactándome directamente por
+                WhatsApp.
             </p>
 
-            <!-- Reemplaza el número de teléfono en el enlace (usa formato internacional, ej. 521234567890) -->
             <a href="https://wa.me/5215559971021" target="_blank" class="btn">
                 Contactar por WhatsApp
+            </a>
+        </section>
+
+        <section class="section-rsvp">
+            <h2>Ubicaciones</h2>
+            <h3>Ceremonia Religiosa</h3>
+
+            <i class="fa-solid fa-church card-icon"></i>
+            <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
+            <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
+            <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">
+                <i class="fa-solid fa-location-dot"></i>
+                Ver ubicación
             </a>
 
         </section>
 
         <section class="section-light">
-            <div class="card">
-                <i class="fa-solid fa-church card-icon"></i>
-                <h3>Ceremonia Religiosa</h3>
-                <p><strong>Lugar:</strong> Parroquia de San José El Vidrio </p>
-                <p>Morelos 83, Centro San José El Vidrio, Nicolás Romero Mex. , Villa Nicolás Romero, Mexico, 54449</p>
-                <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Ver ubicación
-                </a>
-            </div>
-
-            <div class="card">
+            <h2>Recepción y Banquete</h2>
+            <div class="card card-solid">
                 <i class="fa-solid fa-cake-candles card-icon"></i>
-                <h3>Recepción y Banquete</h3>
                 <p><strong>Lugar:</strong> Salón de Eventos "La Toscana SJV"</p>
                 <p>Prol. Morelos 100, 54449 San José el Vidrio, Méx.</p>
                 <a href="https://maps.app.goo.gl/uk2k1zwsjk6e14mk6" target="_blank" class="btn btn-gold"><i
                         class="fa-solid fa-location-dot"></i>
                     Ver ubicación</a>
             </div>
-
         </section>
 
         <!-- HOSPEDAJE RECOMENDADO -->
-        <section class="section-light">
+        <section class="section-rsvp">
             <h2>Hospedaje Recomendado</h2>
             <h3>Para invitados foráneos</h3>
             <div class="card card-solid">
@@ -219,38 +221,37 @@
         <section class="section-rsvp">
             <h2>Mesa de Regalos</h2>
             <p>Tu presencia es mi mejor regalo, pero si deseas hacerme un detalle, te dejo mis opciones:</p>
-            <p class="gift-envelope"><i class="fa-solid fa-envelope-open-text"></i> También contaremos con lluvia de
+
+            <p class="gift-envelope"> <i class="fa-solid fa-envelope-open-text"></i> También contaremos con lluvia de
                 sobres en el salón.</p>
+
             <button class="btn btn-outline" onclick="toggleDatosBancarios()">Ver Datos Bancarios</button>
 
             <div class="bank-details" id="bank-box">
-                <p><strong>Banco:</strong> Banco BBVA</p>
+                <p><strong>Banco:</strong> BBVA</p>
                 <p><strong>Titular:</strong>Abril Jimena Camacho García</p>
                 <p><strong>Cuenta:</strong> 156 341 4034</p>
                 <p><strong>CLABE Interbancaria:</strong> 012 180 01563414034 9</p>
             </div>
         </section>
 
-        
         <!-- RSVP INTERACTIVO -->
-        <section class="section-rsvp">
+        <section class="section-light">
             <h2>Confirmar Asistencia</h2>
             <p class="rsvp-intro">Por favor, indícanos si podrás acompañarnos antes del 15 de Julio 2026.</p>
-             <a href="https://forms.gle/ocadjH6TUpzWtTB86" target="_blank" class="btn">
+            <a href="https://forms.gle/ocadjH6TUpzWtTB86" target="_blank" class="btn">
                 Confirmar Asistencia
             </a>
         </section>
-        
-        <section>
-            <div class="video-container">
-                <div class="music-player">
-                    <button id="playBtn">🎵</button>
-                    <span>Mi Canción Especial</span>
-                </div>
-                <audio id="bgMusic" loop>
-                    <source src="margareth.mp3" type="audio/mpeg">
-                </audio>
+
+        <section class="section-rsvp">
+            <div class="music-player">
+                <button id="playBtn">🎵</button>
+                <span>Mi Canción Especial</span>
             </div>
+            <audio id="bgMusic" loop>
+                <source src="margareth.mp3" type="audio/mpeg">
+            </audio>
         </section>
 
         <footer>
