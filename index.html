@@ -65,7 +65,7 @@
   },
   "organizer": {    
     "@type": "Person",
-    "name": "Familia de la Camacho García",
+    "name": "Familia Camacho Garcia"
   }
 }
 </script>
@@ -109,46 +109,8 @@
             <p>Diana García y Jesús Hernández</p>
         </section>
 
-        <!-- CONTROL DE PASES ASIGNADOS -->
-        <section class="section-light">
-            <h3>Pase Exclusivo</h3>
-            <div class="ticket-box">
-                <div class="family-name" id="guest-family">Familia Invitada</div>
-                <div class="badge"><i class="fa-solid fa-circle-check"></i> Pase Habilitado</div>
-                <div class="ticket-info">
-                    <div class="ticket-stat">
-                        <span id="guest-tickets">2</span>
-                        <label>Asientos</label>
-                    </div>
-                    <div class="ticket-stat">
-                        <span id="guest-table">4</span>
-                        <label>Mesa</label>
-                    </div>
-                </div>
-            </div>
-            <p class="ticket-note">* Los pases son personales e intransferibles.</p>
-        </section>
 
-        <section>
 
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/A41To7E3KSc?si=vGmKGR2wI8IpJ-si" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-
-                <div class="music-player">
-                    <button id="playBtn">🎵</button>
-                    <span>Mi Canción Especial</span>
-                </div>
-
-                <audio id="bgMusic" loop>
-                    <source src="margareth.mp3" type="audio/mpeg">
-                </audio>
-
-            </div>
-
-        </section>
 
         <!-- CUENTA REGRESIVA -->
         <section>
@@ -258,7 +220,7 @@
         </section>
 
         <!-- MESA DE REGALOS -->
-        <section>
+        <section class="section-rsvp">
             <h2>Mesa de Regalos</h2>
             <p>Tu presencia es mi mejor regalo, pero si deseas hacerme un detalle, te dejo mis opciones:</p>
             <p class="gift-envelope"><i class="fa-solid fa-envelope-open-text"></i> También contaremos con lluvia de
@@ -273,11 +235,11 @@
             </div>
         </section>
 
+        
         <!-- RSVP INTERACTIVO -->
         <section class="section-rsvp">
             <h2>Confirmar Asistencia</h2>
             <p class="rsvp-intro">Por favor, indícanos si podrás acompañarnos antes del 15 de Julio 2026.</p>
-
             <form class="rsvp-form" onsubmit="enviarRSVP(event)">
                 <div class="form-group">
                     <label for="rsvp-status">¿Asistirás?</label>
@@ -302,100 +264,27 @@
                 <button type="submit" class="btn"><i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp</button>
             </form>
         </section>
+        
+        <section>
+            <div class="video-container">
+                <div class="music-player">
+                    <button id="playBtn">🎵</button>
+                    <span>Mi Canción Especial</span>
+                </div>
+                <audio id="bgMusic" loop>
+                    <source src="margareth.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
 
         <footer>
             <p>Código de vestimenta: Casual / Formal</p>
             <p class="footer-love">¡Gracias por ser parte de mi vida!</p>
         </footer>
     </div>
-    
-    <script>
-        const audio = document.getElementById('bgMusic');
-        const btn = document.getElementById('playBtn');
-
-        btn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play();
-                btn.innerHTML = '⏸';
-            } else {
-                audio.pause();
-                btn.innerHTML = '🎵';
-            }
-        });
-
-        // Intento de autoplay
-        window.addEventListener('load', () => {
-            audio.play().catch(() => {
-                console.log('Autoplay bloqueado por el navegador');
-            });
-        });
-    </script>
-
-    <style>
-        .music-player {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #ff9ac8, #ffc7df);
-            color: white;
-            padding: 12px 18px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 10px 30px rgba(255, 105, 180, .4);
-            z-index: 9999;
-            font-family: serif;
-        }
-
-        #playBtn {
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            background: #ff69b4;
-            color: white;
-            font-size: 22px;
-            cursor: pointer;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
-
-    <!-- Vinculación del archivo JavaScript externo -->
-    <style>
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* Relación de aspecto 16:9 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 
     <script src="script.min.js"></script>
+    <script src="app.min.js"></script>
 </body>
 
 </html>

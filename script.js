@@ -3,9 +3,9 @@
 // ==========================================
 // Define los parámetros del evento: (Año, Mes [0-11], Día, Hora, Minutos)
 // Nota: Enero es 0, Febrero es 1, ..., Diciembre es 11
-const fechaEvento = new Date(2026, 7, 8, 14, 0, 0).getTime(); 
+const fechaEvento = new Date(2026, 7, 8, 14, 0, 0).getTime();
 
-const x = setInterval(function() {
+const x = setInterval(function () {
     const ahora = new Date().getTime();
     const distancia = fechaEvento - ahora;
 
@@ -53,8 +53,8 @@ function actualizarCamposAsistencia() {
 // Captura variables de la barra del navegador (URL Params)
 // Ejemplo para pruebas: index.html?f=Familia+Morales+Gomez&p=5&m=12
 const urlParams = new URLSearchParams(window.location.search);
-const familia = urlParams.get('f') || "Familia Invitada"; 
-const pasesMaximos = parseInt(urlParams.get('p')) || 2;  
+const familia = urlParams.get('f') || "Familia Invitada";
+const pasesMaximos = parseInt(urlParams.get('p')) || 2;
 const numeroMesa = urlParams.get('m') || "Asignada en la entrada";
 
 // Asigna la información a las tarjetas visuales
@@ -68,7 +68,7 @@ for (let i = 1; i <= pasesMaximos; i++) {
     let opt = document.createElement('option');
     opt.value = i;
     opt.innerHTML = i + (i === 1 ? " Persona" : " Personas");
-    if(i === pasesMaximos) opt.selected = true; // Por defecto selecciona el máximo
+    if (i === pasesMaximos) opt.selected = true; // Por defecto selecciona el máximo
     rsvpCountSelect.appendChild(opt);
 }
 
@@ -79,9 +79,9 @@ function enviarRSVP(event) {
     event.preventDefault();
     const status = document.getElementById('rsvp-status').value;
     const mensajeOriginal = document.getElementById('rsvp-message').value;
-    
+
     // CONFIGURACIÓN OBLIGATORIA: Escribe tu número real aquí con código de país (ej. 52 para México)
-    const numeroCelularDestino = "5215551594567"; 
+    const numeroCelularDestino = "5215559971021";
     let textoWhatsApp = "";
 
     if (status === 'si') {
@@ -92,11 +92,32 @@ function enviarRSVP(event) {
     }
 
     // Si el invitado escribió un mensaje opcional, lo concatena con formato de bloque de cita
-    if(mensajeOriginal.trim() !== "") {
+    if (mensajeOriginal.trim() !== "") {
         textoWhatsApp += `\n\n💌 *Mensaje:* "${mensajeOriginal}"`;
     }
 
     // Construcción de la URL de escape segura para caracteres especiales
-    const urlFinal = `https://wa.me{numeroCelularDestino}?text=${encodeURIComponent(textoWhatsApp)}`;
+    const urlFinal = `https://wa.me/5215559971021?text=${encodeURIComponent(textoWhatsApp)}`;
     window.open(urlFinal, '_blank');
 }
+
+
+const audio = document.getElementById('bgMusic');
+const btn = document.getElementById('playBtn');
+
+btn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = '⏸';
+    } else {
+        audio.pause();
+        btn.innerHTML = '🎵';
+    }
+});
+
+// Intento de autoplay
+window.addEventListener('load', () => {
+    audio.play().catch(() => {
+        console.log('Autoplay bloqueado por el navegador');
+    });
+});
