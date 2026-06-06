@@ -52,25 +52,25 @@ function actualizarCamposAsistencia() {
 // ==========================================
 // Captura variables de la barra del navegador (URL Params)
 // Ejemplo para pruebas: index.html?f=Familia+Morales+Gomez&p=5&m=12
-const urlParams = new URLSearchParams(window.location.search);
-const familia = urlParams.get('f') || "Familia Invitada";
-const pasesMaximos = parseInt(urlParams.get('p')) || 2;
-const numeroMesa = urlParams.get('m') || "Asignada en la entrada";
+// const urlParams = new URLSearchParams(window.location.search);
+// const familia = urlParams.get('f') || "Familia Invitada";
+// const pasesMaximos = parseInt(urlParams.get('p')) || 2;
+// const numeroMesa = urlParams.get('m') || "Asignada en la entrada";
 
-// Asigna la información a las tarjetas visuales
-document.getElementById('guest-family').innerText = familia;
-document.getElementById('guest-tickets').innerText = pasesMaximos;
-document.getElementById('guest-table').innerText = numeroMesa;
+// // Asigna la información a las tarjetas visuales
+// document.getElementById('guest-family').innerText = familia;
+// document.getElementById('guest-tickets').innerText = pasesMaximos;
+// document.getElementById('guest-table').innerText = numeroMesa;
 
-// Llena el selector dinámico RSVP adaptándose al total de pases válidos
-const rsvpCountSelect = document.getElementById('rsvp-count');
-for (let i = 1; i <= pasesMaximos; i++) {
-    let opt = document.createElement('option');
-    opt.value = i;
-    opt.innerHTML = i + (i === 1 ? " Persona" : " Personas");
-    if (i === pasesMaximos) opt.selected = true; // Por defecto selecciona el máximo
-    rsvpCountSelect.appendChild(opt);
-}
+// // Llena el selector dinámico RSVP adaptándose al total de pases válidos
+// const rsvpCountSelect = document.getElementById('rsvp-count');
+// for (let i = 1; i <= pasesMaximos; i++) {
+//     let opt = document.createElement('option');
+//     opt.value = i;
+//     opt.innerHTML = i + (i === 1 ? " Persona" : " Personas");
+//     if (i === pasesMaximos) opt.selected = true; // Por defecto selecciona el máximo
+//     rsvpCountSelect.appendChild(opt);
+// }
 
 // ==========================================
 // 4. PROCESAMIENTO RSVP VÍA WHATSAPP
@@ -105,19 +105,22 @@ function enviarRSVP(event) {
 const audio = document.getElementById('bgMusic');
 const btn = document.getElementById('playBtn');
 
+// Inicializa el estado del botón
+btn.innerHTML = '🎵';
+
 btn.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play();
-        btn.innerHTML = '⏸';
+        audio.play().then(() => {
+            btn.innerHTML = '⏸';
+        }).catch((error) => {
+            console.error('Error al reproducir audio:', error);
+            alert('No se pudo reproducir la canción. Por favor, intenta más tarde.');
+        });
     } else {
         audio.pause();
         btn.innerHTML = '🎵';
     }
 });
 
-// Intento de autoplay
-window.addEventListener('load', () => {
-    audio.play().catch(() => {
-        console.log('Autoplay bloqueado por el navegador');
-    });
-});
+// Nota: Autoplay no está permitido en navegadores modernos sin interacción del usuario
+// El usuario debe hacer clic en el botón para iniciar la reproducción
