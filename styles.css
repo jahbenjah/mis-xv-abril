@@ -578,23 +578,35 @@ footer {
 /* Estilo y animación para la frase principal (usa la paleta: rosas -> dorado) */
 .frase {
     font-family: 'Alex Brush', cursive;
-    font-size: clamp(1.1rem, 2.2vw, 1.9rem);
+    /* Más grande en móviles */
+    font-size: clamp(1.8rem, 5vw, 3rem);
     max-width: 900px;
-    margin: 0.6rem auto;
+    margin: 0.8rem auto;
     text-align: center;
-    line-height: 1.4;
-    padding: 1rem 1rem;
-    /* Gradiente con tonos de la paleta (rosas -> dorado) */
-    background: linear-gradient(90deg, #ff9ac8 0%, #ffc7df 45%, #ffd88a 100%);
+    line-height: 1.5;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(
+        90deg,
+        #ff8fbe 0%,
+        #ffc4dc 45%,
+        #ffd88a 100%
+    );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    filter: drop-shadow(0 10px 22px rgba(255, 105, 180, 0.12));
+    /* Más contraste */
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,.18));
+
+    text-shadow:
+        0 1px 2px rgba(255,255,255,.4),
+        0 3px 12px rgba(255, 170, 200, .35);
+
     opacity: 0;
     transform: translateY(18px) scale(0.98);
-    /* Entradas y animaciones en bucle */
-    animation: fraseEntrance 900ms cubic-bezier(.2, .9, .2, 1) 200ms forwards,
+
+    animation:
+        fraseEntrance 900ms cubic-bezier(.2, .9, .2, 1) 200ms forwards,
         gradientShift 6s ease-in-out 1s infinite,
         fraseGlow 3.5s ease-in-out 1s infinite;
 }
@@ -654,13 +666,32 @@ footer {
 }
 
 @media (max-width: 560px) {
+    .frase {
+        font-size: 2.4rem;
+        line-height: 1.4;
+        padding: 1rem 0.8rem;
+        max-width: 95%;
+    }
 
     .frase::before,
     .frase::after {
         display: none;
     }
 }
+.frase {
+    position: relative;
+}
 
+.frase::selection {
+    background: rgba(255, 216, 138, 0.3);
+}
+
+.frase-wrapper {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 1rem;
+}
 
 .music-player {
     position: fixed;
@@ -702,4 +733,48 @@ footer {
     100% {
         transform: scale(1);
     }
+}
+
+
+.familia {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #5a3d4a;
+}
+
+.bloque {
+    margin-bottom: 2rem;
+}
+
+.familia {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #5a3d4a;
+}
+
+.bloque {
+    margin-bottom: 2rem;
+}
+
+.familia h2 {
+    font-family: 'Alex Brush', cursive;
+    color: var(--accent);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+.familia p {
+    font-family: 'Alex Brush', sans-serif;
+    font-size: 2.1rem;
+    color: #7a5b68;
+    margin: 0.3rem 0;
+}
+
+.separador {
+    color: #c9a24f;
+    /* rosa */
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
